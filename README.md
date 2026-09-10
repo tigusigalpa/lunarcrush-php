@@ -2,6 +2,17 @@
 
 ![Lunarcrush PHP Laravel SDK Client](https://i.postimg.cc/VLC7ZDZq/lunarcrush-php-laravel.jpg)
 
+[![Packagist Version](https://img.shields.io/packagist/v/tigusigalpa/lunarcrush-php.svg)](https://packagist.org/packages/tigusigalpa/lunarcrush-php)
+[![PHP Version](https://img.shields.io/packagist/php-v/tigusigalpa/lunarcrush-php.svg)](https://packagist.org/packages/tigusigalpa/lunarcrush-php)
+[![License](https://img.shields.io/packagist/l/tigusigalpa/lunarcrush-php.svg)](LICENSE)
+[![CI](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/ci.yml)
+[![Tests](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/tests.yml)
+[![Coverage](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/coverage.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/coverage.yml)
+[![CodeQL](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/codeql.yml)
+[![Security](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/security.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/security.yml)
+[![Codecov](https://codecov.io/gh/tigusigalpa/lunarcrush-php/graph/badge.svg)](https://codecov.io/gh/tigusigalpa/lunarcrush-php)
+[![GitHub Release](https://img.shields.io/github/v/release/tigusigalpa/lunarcrush-php)](https://github.com/tigusigalpa/lunarcrush-php/releases)
+
 > **Real-time crypto & stock social intelligence, right where your PHP code lives.**
 
 Ever wanted to know *what the internet is actually saying* about Bitcoin, Ethereum, or Tesla — not just the price on a
@@ -25,16 +36,6 @@ foreach ($coins as $coin) {
     echo "{$coin->symbol}: Galaxy Score {$coin->galaxyScore}, sentiment {$coin->sentiment}\n";
 }
 ```
-
-[![Packagist Version](https://img.shields.io/packagist/v/tigusigalpa/lunarcrush-php.svg)](https://packagist.org/packages/tigusigalpa/lunarcrush-php)
-[![PHP Version](https://img.shields.io/packagist/php-v/tigusigalpa/lunarcrush-php.svg)](https://packagist.org/packages/tigusigalpa/lunarcrush-php)
-[![License](https://img.shields.io/packagist/l/tigusigalpa/lunarcrush-php.svg)](LICENSE)
-[![CI](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/ci.yml)
-[![Tests](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/tests.yml)
-[![Coverage](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/coverage.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/coverage.yml)
-[![CodeQL](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/codeql.yml)
-[![Codecov](https://codecov.io/gh/tigusigalpa/lunarcrush-php/graph/badge.svg)](https://codecov.io/gh/tigusigalpa/lunarcrush-php)
-[![GitHub Release](https://img.shields.io/github/v/release/tigusigalpa/lunarcrush-php)](https://github.com/tigusigalpa/lunarcrush-php/releases)
 
 ---
 

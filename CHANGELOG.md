@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - URL-encode caller-supplied path segments across all resource groups, so reserved characters cannot alter
   the LunarCrush endpoint being requested.
 - Preserve explicit `0` values for retry settings loaded from environment variables.
+- Require Guzzle 7.15.5 or later to exclude known vulnerabilities in older 7.x releases.
 
 ## [1.0.0] - 2025-01-01
 
