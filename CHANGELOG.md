@@ -17,6 +17,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Broadened the `phpunit/phpunit` dev requirement to `^10.5 || ^11.0 || ^12.0` so the suite can run
   against the PHPUnit versions used by Laravel 12/13 test tooling.
 
+### Fixed
+
+- URL-encode caller-supplied path segments across all resource groups, so reserved characters cannot alter
+  the LunarCrush endpoint being requested.
+- Preserve explicit `0` values for retry settings loaded from environment variables.
+
 ## [1.0.0] - 2025-01-01
 
 ### Added

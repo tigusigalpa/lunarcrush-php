@@ -1,6 +1,6 @@
-# LunarCrush PHP SDK
+# LunarCrush PHP/Laravel Client/SDK/Library
 
-![YandexGPT PHP SDK](https://i.postimg.cc/VLC7ZDZq/lunarcrush-php-laravel.jpg)
+![Lunarcrush PHP Laravel SDK Client](https://i.postimg.cc/VLC7ZDZq/lunarcrush-php-laravel.jpg)
 
 > **Real-time crypto & stock social intelligence, right where your PHP code lives.**
 
@@ -29,7 +29,12 @@ foreach ($coins as $coin) {
 [![Packagist Version](https://img.shields.io/packagist/v/tigusigalpa/lunarcrush-php.svg)](https://packagist.org/packages/tigusigalpa/lunarcrush-php)
 [![PHP Version](https://img.shields.io/packagist/php-v/tigusigalpa/lunarcrush-php.svg)](https://packagist.org/packages/tigusigalpa/lunarcrush-php)
 [![License](https://img.shields.io/packagist/l/tigusigalpa/lunarcrush-php.svg)](LICENSE)
-[![Tests](https://img.shields.io/github/actions/workflow/status/tigusigalpa/lunarcrush-php/tests.yml?branch=main&label=tests)](https://github.com/tigusigalpa/lunarcrush-php/actions)
+[![CI](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/ci.yml)
+[![Tests](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/tests.yml)
+[![Coverage](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/coverage.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/coverage.yml)
+[![CodeQL](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/tigusigalpa/lunarcrush-php/actions/workflows/codeql.yml)
+[![Codecov](https://codecov.io/gh/tigusigalpa/lunarcrush-php/graph/badge.svg)](https://codecov.io/gh/tigusigalpa/lunarcrush-php)
+[![GitHub Release](https://img.shields.io/github/v/release/tigusigalpa/lunarcrush-php)](https://github.com/tigusigalpa/lunarcrush-php/releases)
 
 ---
 
@@ -76,7 +81,7 @@ decode JSON, invent your own value objects, and then discover — usually in pro
 
 | Requirement          | Version                                                                          |
 |----------------------|----------------------------------------------------------------------------------|
-| PHP                  | `8.1`, `8.2`, `8.3`, or newer                                                    |
+| PHP                  | `8.1`–`8.4` are tested in CI; newer PHP versions are supported by the `^8.1` constraint |
 | A PSR-18 HTTP client | Guzzle `^7.4` ships by default                                                   |
 | Laravel (optional)   | `10.x`, `11.x`, `12.x`, or `13.x` for the facade & service provider              |
 | A LunarCrush API key | Grab one from your [LunarCrush dashboard](https://lunarcrush.com/developers/api) |

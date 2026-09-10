@@ -27,7 +27,7 @@ final class CreatorsResource extends AbstractResource
     {
         $network = $network instanceof Network ? $network->value : $network;
 
-        return $this->reset("/public/creator/{$network}/{$id}/v1")->asItem(CreatorDto::class);
+        return $this->reset('/public/creator/' . $this->encodePathSegment($network) . '/' . $this->encodePathSegment($id) . '/v1')->asItem(CreatorDto::class);
     }
 
     /**
@@ -39,7 +39,7 @@ final class CreatorsResource extends AbstractResource
     {
         $network = $network instanceof Network ? $network->value : $network;
 
-        return $this->reset("/public/creator/{$network}/{$id}/posts/v1")
+        return $this->reset('/public/creator/' . $this->encodePathSegment($network) . '/' . $this->encodePathSegment($id) . '/posts/v1')
             ->asCollection(PostDto::class, PostCollection::class);
     }
 
@@ -52,7 +52,7 @@ final class CreatorsResource extends AbstractResource
     {
         $network = $network instanceof Network ? $network->value : $network;
 
-        return $this->reset("/public/creator/{$network}/{$id}/time-series/v1")
+        return $this->reset('/public/creator/' . $this->encodePathSegment($network) . '/' . $this->encodePathSegment($id) . '/time-series/v1')
             ->asCollection(TimeSeriesPointDto::class, TimeSeriesCollection::class);
     }
 

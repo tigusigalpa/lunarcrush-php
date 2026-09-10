@@ -49,7 +49,7 @@ final class SearchesResource extends AbstractResource
      */
     public function show(string $slug): static
     {
-        return $this->reset("/public/searches/{$slug}")->asItem(SearchDto::class);
+        return $this->reset('/public/searches/' . $this->encodePathSegment($slug))->asItem(SearchDto::class);
     }
 
     /**
@@ -59,7 +59,9 @@ final class SearchesResource extends AbstractResource
      */
     public function update(string $slug, array $params = []): static
     {
-        return $this->reset("/public/searches/{$slug}/update")->withParams($params)->asItem(SearchDto::class);
+        return $this->reset('/public/searches/' . $this->encodePathSegment($slug) . '/update')
+            ->withParams($params)
+            ->asItem(SearchDto::class);
     }
 
     /**
@@ -67,6 +69,6 @@ final class SearchesResource extends AbstractResource
      */
     public function delete(string $slug): static
     {
-        return $this->reset("/public/searches/{$slug}/delete");
+        return $this->reset('/public/searches/' . $this->encodePathSegment($slug) . '/delete');
     }
 }

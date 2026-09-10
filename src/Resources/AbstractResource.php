@@ -235,4 +235,14 @@ abstract class AbstractResource
 
         return $this;
     }
+
+    /**
+     * Escape a caller-provided value that will occupy exactly one URL path segment.
+     *
+     * This keeps characters such as `/`, `?`, and `#` from changing the API route.
+     */
+    protected function encodePathSegment(string $value): string
+    {
+        return rawurlencode($value);
+    }
 }

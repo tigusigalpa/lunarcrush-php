@@ -38,7 +38,7 @@ final class TopicsResource extends AbstractResource
      */
     public function topic(string $topic): static
     {
-        return $this->reset("/public/topic/{$topic}/v1")->asItem(TopicDto::class);
+        return $this->reset('/public/topic/' . $this->encodePathSegment($topic) . '/v1')->asItem(TopicDto::class);
     }
 
     /**
@@ -48,7 +48,7 @@ final class TopicsResource extends AbstractResource
      */
     public function timeSeries(string $topic): static
     {
-        return $this->reset("/public/topic/{$topic}/time-series/v1")
+        return $this->reset('/public/topic/' . $this->encodePathSegment($topic) . '/time-series/v1')
             ->asCollection(TimeSeriesPointDto::class, TimeSeriesCollection::class);
     }
 
@@ -59,7 +59,7 @@ final class TopicsResource extends AbstractResource
      */
     public function timeSeriesV2(string $topic): static
     {
-        return $this->reset("/public/topic/{$topic}/time-series/v2")
+        return $this->reset('/public/topic/' . $this->encodePathSegment($topic) . '/time-series/v2')
             ->asCollection(TimeSeriesPointDto::class, TimeSeriesCollection::class);
     }
 
@@ -70,7 +70,7 @@ final class TopicsResource extends AbstractResource
      */
     public function creators(string $topic): static
     {
-        return $this->reset("/public/topic/{$topic}/creators/v1")
+        return $this->reset('/public/topic/' . $this->encodePathSegment($topic) . '/creators/v1')
             ->asCollection(CreatorDto::class, CreatorCollection::class);
     }
 
@@ -81,7 +81,8 @@ final class TopicsResource extends AbstractResource
      */
     public function news(string $topic): static
     {
-        return $this->reset("/public/topic/{$topic}/news/v1")->asCollection(PostDto::class, PostCollection::class);
+        return $this->reset('/public/topic/' . $this->encodePathSegment($topic) . '/news/v1')
+            ->asCollection(PostDto::class, PostCollection::class);
     }
 
     /**
@@ -91,7 +92,8 @@ final class TopicsResource extends AbstractResource
      */
     public function posts(string $topic): static
     {
-        return $this->reset("/public/topic/{$topic}/posts/v1")->asCollection(PostDto::class, PostCollection::class);
+        return $this->reset('/public/topic/' . $this->encodePathSegment($topic) . '/posts/v1')
+            ->asCollection(PostDto::class, PostCollection::class);
     }
 
     /**
@@ -99,6 +101,6 @@ final class TopicsResource extends AbstractResource
      */
     public function whatsUp(string $topic): static
     {
-        return $this->reset("/public/topic/{$topic}/whatsup/v1");
+        return $this->reset('/public/topic/' . $this->encodePathSegment($topic) . '/whatsup/v1');
     }
 }

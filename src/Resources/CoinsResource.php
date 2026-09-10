@@ -44,7 +44,7 @@ final class CoinsResource extends AbstractResource
      */
     public function coin(string $coin): static
     {
-        return $this->reset("/public/coins/{$coin}/v1")->asItem(CoinDto::class);
+        return $this->reset('/public/coins/' . $this->encodePathSegment($coin) . '/v1')->asItem(CoinDto::class);
     }
 
     /**
@@ -54,7 +54,7 @@ final class CoinsResource extends AbstractResource
      */
     public function meta(string $coin): static
     {
-        return $this->reset("/public/coins/{$coin}/meta/v1");
+        return $this->reset('/public/coins/' . $this->encodePathSegment($coin) . '/meta/v1');
     }
 
     /**
@@ -66,7 +66,7 @@ final class CoinsResource extends AbstractResource
      */
     public function timeSeries(string $coin): static
     {
-        return $this->reset("/public/coins/{$coin}/time-series/v2")
+        return $this->reset('/public/coins/' . $this->encodePathSegment($coin) . '/time-series/v2')
             ->asCollection(TimeSeriesPointDto::class, TimeSeriesCollection::class);
     }
 }

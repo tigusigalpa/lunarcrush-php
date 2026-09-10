@@ -39,7 +39,7 @@ final class StocksResource extends AbstractResource
      */
     public function stock(string $stock): static
     {
-        return $this->reset("/public/stocks/{$stock}/v1")->asItem(StockDto::class);
+        return $this->reset('/public/stocks/' . $this->encodePathSegment($stock) . '/v1')->asItem(StockDto::class);
     }
 
     /**
@@ -49,7 +49,7 @@ final class StocksResource extends AbstractResource
      */
     public function timeSeries(string $stock): static
     {
-        return $this->reset("/public/stocks/{$stock}/time-series/v2")
+        return $this->reset('/public/stocks/' . $this->encodePathSegment($stock) . '/time-series/v2')
             ->asCollection(TimeSeriesPointDto::class, TimeSeriesCollection::class);
     }
 }

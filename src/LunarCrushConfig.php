@@ -55,11 +55,23 @@ final class LunarCrushConfig
     public static function fromEnv(): self
     {
         return self::fromArray([
-            'api_key' => getenv('LUNARCRUSH_API_KEY') ?: '',
-            'base_url' => getenv('LUNARCRUSH_BASE_URL') ?: 'https://lunarcrush.com/api4',
-            'timeout' => getenv('LUNARCRUSH_TIMEOUT') ?: 15.0,
-            'retry_attempts' => getenv('LUNARCRUSH_RETRY_ATTEMPTS') ?: 3,
-            'retry_delay' => getenv('LUNARCRUSH_RETRY_DELAY') ?: 1.0,
+            'api_key' => self::environmentValue('LUNARCRUSH_API_KEY', ''),
+            'base_url' => self::environmentValue('LUNARCRUSH_BASE_URL', 'https://lunarcrush.com/api4'),
+            'timeout' => self::environmentValue('LUNARCRUSH_TIMEOUT', 15.0),
+            'retry_attempts' => self::environmentValue('LUNARCRUSH_RETRY_ATTEMPTS', 3),
+            'retry_delay' => self::environmentValue('LUNARCRUSH_RETRY_DELAY', 1.0),
         ]);
+    }
+
+    /**
+     * Return an environment variable's value, falling back only when it is unset or empty.
+     *
+     * The string "0" is an intentional configuration value for retry settings.
+     */
+    private static function environmentValue(string $name, string|int|float $default): string|int|float
+    {
+        $value = getenv($name);
+
+        return $value === false || $value === '' ? $default : $value;
     }
 }

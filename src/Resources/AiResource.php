@@ -18,7 +18,7 @@ final class AiResource extends AbstractResource
      */
     public function topic(string $topic): static
     {
-        return $this->reset("/public/ai/topic/{$topic}");
+        return $this->reset('/public/ai/topic/' . $this->encodePathSegment($topic));
     }
 
     /**
@@ -33,6 +33,6 @@ final class AiResource extends AbstractResource
     {
         $network = $network instanceof Network ? $network->value : $network;
 
-        return $this->reset("/public/ai/creator/{$network}/{$id}");
+        return $this->reset('/public/ai/creator/' . $this->encodePathSegment($network) . '/' . $this->encodePathSegment($id));
     }
 }
